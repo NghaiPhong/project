@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&display=swap');
+:root {
+    --primary: #121314;
+    --secondary: #131415;
+    --hover: #18191a;
+    --accent: #7ECA9C;
+    --hover-accent: #a2d4b6;
+    --dark-accent: #4c8664;
+    --dark-accent-transparent: #4c866421;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Google Sans Code", "monospace";
+}
+
+body {
+    background-color: var(--secondary);
+    color: white;
+}
+
+main {
+    background: url("/images/background.png");
+    background-repeat: repeat-x;
+}
+
+nav {
+    background-color: var(--primary);
+    border-bottom: 2px solid var(--hover);
+    display: flex;
+    padding: 0 10px 0 10px;
+}
+
+nav * {
+    list-style: none;
+    color: white;
+}
+
+nav a {
+    display: flex;
+    padding: 1em 1em;
+    text-decoration: none;
+    transition: background-color 100ms ease-in-out;
+}
+
+nav a:hover {
+    background-color: var(--hover);
+    border-bottom: 2px solid;
+    border-color: var(--hover-accent);
+}
+
+.current a{
+    border-bottom: 2px solid var(--accent);
+}
+
+#blog {
+    margin-left: auto;
+}
+
+.title {
+    font-size: 5em;
+}
+
+.big-title {
+    font-size: 5em;
+    margin-top: 1em;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: min(5em, 10%);
+    padding: min(5em, 10%);
+}
+
+p {
+    font-size: 1.5em;
+}
+
+span {
+    color: var(--accent);
+}
+
+.code {
+    background-color: var(--primary);
+    padding: 1em;
+    border-radius: 1em;
+    border: 2px solid var(--dark-accent);
+    color: var(--accent);
+    min-width: min(26em, 80%);
+    min-height: 20em;
+    box-shadow: var(--dark-accent-transparent) 0px 0px 60px;
+}
+
+
+.dark-accent {
+    color: var(--dark-accent)
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    border: 2px solid var(--hover);
+    border-radius: 1em;
+    box-shadow: var(--dark-accent-transparent) 0px 0px 5px;
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-color: var(--dark-accent);
+}
+
+.reason {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3em;
+    margin: min(5em, 5%);
+}
+
+.reason div {
+    display: flex;
+    align-items: center;
+    gap: 3em;
+}
+
+.reason p {
+    font-size: 2em;
+}
+
+@media screen and (max-width: 768px) {
+    .reason div {
+        flex-direction: column;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 2em;
+    }
+}
