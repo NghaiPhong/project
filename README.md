@@ -1,0 +1,3 @@
+# project
+
+dự án mindx
