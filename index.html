@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=10">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
-    <script href="/js/script.js"></script>
+    <script href="/js/home.js"></script>
 </head>
 <body>
     <nav>
@@ -14,18 +14,26 @@
         <li><a href="/pages/practice.html">Practice</a></li>
         <li><a href="/pages/leaderboard.html">Leaderboard</a></li>
         <li><a href="/pages/blog.html">Blog</a></li>
-        <li id="blog"><a href="/pages/account.html">Account</a></li>
+        <li id="blog"><a href="/pages/login.html">Account</a></li>
     </nav>
     <main>
         <div class="container">
             <div>
                 <h1 class="title">Code<span class="underline">ded</span></h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat in ab natus voluptates recusandae eligendi accusantium minima perferendis qui facilis, quis nihil deserunt rem laudantium voluptatibus dicta animi voluptas nisi.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quaerat in ab natus voluptates recusandae eligendi accusantium minima perferendis qui facilis, quis nihil deserunt rem laudantium voluptatibus dicta animi voluptas nisi.<ewr></p>
             </div>
             <div class="code">
-                <p class="dark-accent"># Python</p>
-                <p>print("Hello, World!")</p>
-                <p>for i in range(10): print(i)</p>
+                <nav class="code-navbar">
+                    <li><a id="python" onclick="python()">Python</a></li>
+                    <li><a id="cpp" onclick="cpp()">C++</a></li>
+                    <li><a id="js" onclick="js()">Javascript</a></li>
+                </nav>
+                <div id="code">
+                    <p class="dark-accent"># Python</p>
+                    <p>print("Hello, World!")</p>
+                    <p>for i in range(10):</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</p>
+                </div>
             </div>
         </div>
         <div class="reason">
@@ -41,5 +49,39 @@
             </div>
         </div>
     </main>
+    <script>
+        let pythonv = document.getElementById("python");
+        let cppv = document.getElementById("cpp");
+        let jsv = document.getElementById("js");
+        let code = document.getElementById("code");
+        function python(){
+            code.innerHTML = `<p class="dark-accent"># Python</p>
+                <p>print("Hello, World!")</p>
+                <p>for i in range(10):</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;print(i)</p>`;
+            pythonv.classList.add("current");
+            alert("2323214");
+        }
+        function cpp(){
+            code.innerHTML = `<p class="dark-accent">// C++</p>
+                <p>#include &lt;iostream&gt;</p>
+                <p>using namespace std;</p>
+                <p>int main(){</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;cout << "Hello, World!";</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;return 0;</p>
+                <p>}</p>`
+            cppv.classList.add("current");
+            alert("2323214");
+        }
+        function js(){
+            code.innerHTML = `<p class="dark-accent"># Javascript</p>
+                <p>console.log("Hello, World!");</p>
+                <p>for (let i = 0; i < 10; i++) {</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;console.log(i);</p>
+                <p>};</p>`;
+            jsv.classList.add("current");
+            alert("2323214");
+        }
+    </script>
 </body>
 </html>

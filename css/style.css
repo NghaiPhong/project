@@ -48,6 +48,7 @@ nav a:hover {
     background-color: var(--hover);
     border-bottom: 2px solid;
     border-color: var(--hover-accent);
+    cursor: pointer;
 }
 
 .current a{
@@ -87,8 +88,6 @@ span {
 
 .code {
     background-color: var(--primary);
-    padding: 1em;
-    border-radius: 1em;
     border: 2px solid var(--dark-accent);
     color: var(--accent);
     min-width: min(26em, 80%);
@@ -96,6 +95,9 @@ span {
     box-shadow: var(--dark-accent-transparent) 0px 0px 60px;
 }
 
+.code div {
+    margin: 1em;
+}
 
 .dark-accent {
     color: var(--dark-accent)
@@ -142,4 +144,48 @@ img {
         flex-direction: column;
         gap: 2em;
     }
+}
+
+.register {
+    display: grid;
+    padding: 5em;
+}
+
+.login {
+    position: relative;
+    margin: auto;
+    padding: 2em;
+    background-color: var(--primary);
+    border: 2px solid var(--dark-accent);
+    color: var(--accent);
+    width: 25em;
+    height: 30em;
+    box-shadow: var(--dark-accent-transparent) 0px 0px 60px;
+}
+
+.login button {
+    position: absolute;
+    bottom: 2em;
+    width: 25em;
+}
+
+.login p{
+    margin: 2em 0 0.5em 0;
+    width: 25em;
+}
+
+.login input {
+    background-color: var(--primary);
+    border: 2px solid var(--dark-accent);
+    color: var(--accent);
+    padding: 1em;
+    font-size: 1em;
+    width: 22em;
+}
+
+button {
+    background-color: var(--accent);
+    border: var(--dark-accent);
+    padding: 1em;
+    font-size: 1em;
 }
