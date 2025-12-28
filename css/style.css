@@ -148,7 +148,7 @@ img {
 
 .register {
     display: grid;
-    padding: 5em;
+    padding: 7em;
 }
 
 .login {
@@ -159,22 +159,34 @@ img {
     border: 2px solid var(--dark-accent);
     color: var(--accent);
     width: 25em;
-    height: 30em;
+    height: 25em;
     box-shadow: var(--dark-accent-transparent) 0px 0px 60px;
 }
 
-.login button {
+.login2 {
+    position: relative;
+    margin: auto;
+    padding: 2em;
+    background-color: var(--primary);
+    border: 2px solid var(--dark-accent);
+    color: var(--accent);
+    width: 25em;
+    height: 32em;
+    box-shadow: var(--dark-accent-transparent) 0px 0px 60px;
+}
+
+.login button, .login2 button {
     position: absolute;
     bottom: 2em;
     width: 25em;
 }
 
-.login p{
-    margin: 2em 0 0.5em 0;
+.login p, .login2 p{
+    margin: 1em 0 0.5em 0;
     width: 25em;
 }
 
-.login input {
+.login input, .login2 input {
     background-color: var(--primary);
     border: 2px solid var(--dark-accent);
     color: var(--accent);
