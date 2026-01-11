@@ -6,7 +6,7 @@ import { ToastContainer, toast } from "react-toastify"
 function Account() {
   const [userDetails, setUserDetails] = useState()
   const fetchData = async () => {
-    auth.onAuthStateChanged(async(user) => {
+    auth.onAuthStateChanged(async (user) => {
       const docRef = doc(db, "users", user.uid);
       const docSnap = await getDoc(docRef);
       if (docSnap.exists()) {
@@ -36,7 +36,8 @@ function Account() {
     <>
       <ToastContainer />
       {userDetails ? (
-        <div className="bg-primary border-2 border-accent w-auto h-150 absolute top-[50%] right-[50%] shadow -translate-y-[50%] translate-x-[50%]">
+        <div className="bg-primary border-2 border-accent w-[80%] h-150 absolute top-[50%] right-[50%] shadow -translate-y-[50%] translate-x-[50%]">
+          <h1 className="text-4xl text-white">Quản lý tài khoản</h1>
           <h3 className="text-white">Hello {userDetails.username}!</h3>
           <p className="text-white">Email: {userDetails.email}</p>
           <button className="shadow" onClick={handleSignout}>Signout</button>
