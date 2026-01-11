@@ -1,8 +1,29 @@
+import Course from "../components/course.jsx";
+import { onValue, ref } from "firebase/database";
+import { database } from "../../firebase/firebase.js";
+
 function Practice() {
+  let data;
+  const getCourse = () => {
+    const coursesRef = ref(database, "courses");
+    onValue(coursesRef, (snapshot) => {
+      data = snapshot.val();
+      console.log(data);
+    });
+  };
+
+  getCourse();
+
   return (
     <>
-      <main class="bg-[url(src/img/background.png)] bg-local p-20">
-        <p class="text-white text-8xl font-semibold text-center mt-4 md:mt-16">WIP practice</p>
+      <main className="flex gap-10 p-20 pt-30">
+        {data ? (
+          Object.entries(data).map(([, value]) => (
+            <Course title={value.info.name} content={value.info.desc} />
+          )))
+          : (
+            <p className="text-white">Loading...</p>
+          )}
       </main>
     </>
   )

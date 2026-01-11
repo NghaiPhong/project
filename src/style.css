@@ -1,20 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 @import "tailwindcss";
 
+:root {
+  --toastify-color-dark: #121314;
+  --toastify-color-success: #7ECA9C;
+}
+
 @theme {
   --color-primary: #121314;
   --color-secondary: #131415;
   --color-hover: #18191a;
   --color-accent: #7ECA9C;
   --color-hover-accent: #a2d4b6;
+  --color-dark-accent: #2a4e38;
 }
 
 * {
-  font-family: 'Space Grotesk';
+  font-family: 'Space Grotesk', serif;
 }
 
 body {
   background-color: var(--color-secondary);
+
+  background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
 li {
@@ -22,5 +30,26 @@ li {
 }
 
 code {
-  font-family: 'Google Sans Code';
+  font-family: 'Google Sans Code', serif;
+}
+
+.shadow {
+  box-shadow: 8px 8px 0 0 var(--color-dark-accent);
+}
+
+input {
+  border: 2px solid var(--color-accent);
+  color: white;
+  padding: 8px;
+}
+
+button {
+  background-color: var(--color-accent);
+  padding: 8px;
+  transition: all 0.1s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(3px);
 }

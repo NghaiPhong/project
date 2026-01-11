@@ -1,8 +1,14 @@
+import BlogPage from "../components/blogPage.jsx"
+
 function Blog() {
   return (
     <>
-      <main class="bg-[url(src/img/background.png)] bg-local p-20">
-        <p class="text-white text-8xl font-semibold text-center mt-4 md:mt-16">WIP blog</p>
+      <main className="p-20 flex flex-wrap justify-evenly">
+        <BlogPage title="thing" content="thing34"/>
+        <BlogPage title="thing" content="thing34"/>
+        <BlogPage title="thing" content="thing34"/>
+        <BlogPage title="thing" content="thing34"/>
+        <BlogPage title="thing" content="thing34"/>
       </main>
     </>
   )

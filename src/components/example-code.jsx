@@ -3,7 +3,7 @@ function ExampleCode() {
     <>
       <div
         id="example-code"
-        className="text-white text-xl m-auto w-[90%] h-150 bg-primary border-2 border-accent mt-16"
+        className="text-white text-xl m-auto w-[90%] h-150 bg-primary border-2 border-accent mt-16 shadow"
       >
         <div className="flex bg-primary border-b-2 border-b-hover">
           <li>
