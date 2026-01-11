@@ -19,7 +19,7 @@ function Signup() {
         await setDoc(doc(db, "users", user.uid), {
           email: user.email,
           username: username,
-          xp: 0
+          xp: 1
         })
       }
       toast.success("Đăng ký thành công!", {position: "bottom-right"});
