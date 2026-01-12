@@ -20,8 +20,8 @@
 }
 
 body {
-  background-color: var(--color-secondary);
-
+  background: radial-gradient(circle, transparent 20%, var(--color-primary) 20%, var(--color-primary) 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, var(--color-primary) 20%, var(--color-primary) 80%, transparent 80%, transparent) 25px 25px, linear-gradient(var(--color-hover) 2px, transparent 2px) 0 -1px, linear-gradient(90deg, var(--color-hover) 2px, var(--color-primary) 2px) -1px 0;
+  opacity: 0.8;
   background-size: 50px 50px, 50px 50px, 25px 25px, 25px 25px;
 }
 
