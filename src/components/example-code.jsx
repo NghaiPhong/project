@@ -1,9 +1,12 @@
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import atomOneDark from "react-syntax-highlighter/src/styles/hljs/atom-one-dark.js";
+
 function ExampleCode() {
   return (
     <>
       <div
         id="example-code"
-        className="text-white text-xl m-auto w-[90%] h-150 bg-primary border-2 border-accent mt-16 shadow"
+        className="text-white text-xl m-auto w-[90%] h-150 bg-code-background border-2 border-accent mt-16 shadow"
       >
         <div className="flex bg-primary border-b-2 border-b-hover">
           <li>
@@ -31,9 +34,25 @@ function ExampleCode() {
             </a>
           </li>
         </div>
-        <pre>
-          <code className="code p-5">print("hello")</code>
-        </pre>
+        <code className="code p-5">
+          <SyntaxHighlighter language="python" style={atomOneDark}>
+          {`class TaiKhoan:
+  def __init__(self, stk, ten):
+    self.stk = stk
+    self.ten = ten
+    self.soDu = 0
+
+  def rutTien(self, soTien):
+    if soTien > self.soDu:
+      print("Không đủ tiền")
+    else:
+      self.soDu -= soTien
+      print(f"Tiền {self.soDu}đ")
+
+  def napTien(self, soTien):
+    self.soDu += soTien
+    print(f"Tiền {self.soDu}đ")`}
+        </SyntaxHighlighter></code>
       </div>
     </>
   )

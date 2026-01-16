@@ -1,6 +1,20 @@
 import ExampleCode from "../components/example-code.jsx"
+import { auth } from "../../firebase/firebase.js";
+import {useEffect} from "react";
 
 function Index() {
+  const fetchData = async () => {
+    auth.onAuthStateChanged(async (user) => {
+      if (user !== null) {
+        window.location.href = "/account";
+      }
+    })
+  }
+
+  useEffect(() => {
+    fetchData();
+  })
+
   return (
     <>
       <main className="p-20">
