@@ -5,7 +5,7 @@ import {auth, database, db} from "../../firebase/firebase.js";
 import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useParams } from "react-router-dom";
-import {doc, getDoc} from "firebase/firestore";
+import { doc, getDoc } from "firebase/firestore";
 
 function Learn() {
   const [courses, setCourses] = useState();
